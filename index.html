@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>锐多宝</title>
+  <meta name="description" content="锐多宝的名片">
+  <link rel="stylesheet" href="style.css">
+  <!-- Icon font -->
+  <!-- <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script> -->
+  <!-- 模态框样式 -->
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <main>
+    <div class="background-text">锐多宝</div>
+    <section class="intro">
+      <img class="profile" src="profile.jpeg" alt="ruiduobao">
+      <div class="card">
+        <h1>锐多宝（程锐）</h1>
+        <h2>一名遥感工程师，会写一些代码</h2>
+        <div>
+          <h3>追求</h3>
+          <p>做有趣的事</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="link">
+      <h2>我的产品</h2>
+          <a href="https://www.shengshixian.com/">中国省市县长时间序列数据CTAmap</a>
+          <a href="https://www.shengshixian.com/">省市县乡村五级行政区划查询与下载</a>
+          <a href="https://www.landcover100.com/">土地覆盖和DEM下载网</a>
+          <a href="https://layerdownload.ruiduobao.com/">遥感底图下载网</a>
+          <a href="https://epsg.ruiduobao.com/">坐标系EPSG查询网</a>
+          <a href="https://www.gisrsdata.com/">常用数据介绍网</a>
+          <a href="https://www.rserforum.com/">遥感家园论坛</a>
+          <a href="https://pics.landcover100.com/i/2024/02/22/65d754d99b504.jpg">注册测绘师小程序</a>
+          <a href="https://r.landcover100.com/">地信宝藏屋</a>
+    <section class="social">
+
+      <section class="link">
+        <h2>联系我</h2>
+            <a href="http://pics.landcover100.com/i/2024/02/22/65d762fbc0bf6.jpg">微信 toseeplanet</a>
+            <a href="">电话 15884411724</a>
+            <a href="">邮箱 15884411724@163.com</a>
+            <a href="http://pics.landcover100.com/i/2024/02/22/65d766093e307.jpg">公众号 锐多宝</a>
+            <a href="https://www.zhihu.com/people/justyoufengmei">知乎 锐多宝</a>
+  </main>
+  <!-- 模态框 -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+  </div>
+  <footer>
+    <p>&copy; <a href="https://www.ruiduobao.com/">锐多宝 2024</a></p>
+  </footer>
+  <script>
+    // 获取图片元素
+    var img = document.querySelector('.profile');
+    // 获取模态框元素
+    var modal = document.getElementById('myModal');
+    // 获取模态框中的图片元素
+    var modalImg = document.getElementById("img01");
+    // 获取关闭按钮元素
+    var span = document.getElementsByClassName("close")[0];
+
+    // 点击图片时显示模态框
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src; // 将点击的图片的src属性赋值给模态框中的图片元素
+    }
+
+    // 点击关闭按钮或模态框外部时关闭模态框
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
